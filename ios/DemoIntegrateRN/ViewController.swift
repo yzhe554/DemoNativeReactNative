@@ -13,7 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        goToRNView();
+    }
+
+    override func loadView() {
+        loadReactNativeView()
     }
 
     func goToRNView(messageFromNative: String? = "") {
