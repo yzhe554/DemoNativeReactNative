@@ -30,6 +30,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
     }
+
+    //  override func loadView() {
+    //     loadReactNativeView()
+    // }
+
+     func loadReactNativeView() {
+        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
+        
+        let rootView = RCTRootView(
+            bundleURL: jsCodeLocation,
+            moduleName: "DemoIntegrateRN",
+            initialProperties: ["page": "router1"]
+        )
+        self.view = rootView
+    }
     
     func hideKeyboardWhenTappedAround() {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))

@@ -12,11 +12,19 @@ const TestConnectNative = {
     testConnectNative.sendCallbackToNative(callback);
   },
 
-  exitRN: (tag: any) => {
+  exitRN: (tag: number) => {
     if (Platform.OS === 'ios') {
       testConnectNative.dismissViewController(tag);
     } else {
       testConnectNative.finishActivity();
+    }
+  },
+
+  goToNative: (tag: number) => {
+    if (Platform.OS === 'ios') {
+      testConnectNative.goToSecondViewController(tag);
+    } else {
+      testConnectNative.goToSecondActivity();
     }
   },
 };

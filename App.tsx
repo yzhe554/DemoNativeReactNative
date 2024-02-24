@@ -40,6 +40,12 @@ function Section({children, title}: SectionProps): React.JSX.Element {
       <Pressable onPress={() => TestConnectNative.exitRN(rootTag)}>
         <Text>Back to native view</Text>
       </Pressable>
+
+
+      <Pressable onPress={() => TestConnectNative.goToNative(rootTag)}>
+        <Text>GO to another native view</Text>
+      </Pressable>
+
       <Text
         style={[
           styles.sectionTitle,
