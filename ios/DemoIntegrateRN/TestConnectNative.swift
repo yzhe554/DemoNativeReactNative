@@ -3,6 +3,8 @@ import React
 
 @objc(TestConnectNativeModule)
 class TestConnectNativeModule: NSObject {
+   weak var navigationController: UINavigationController?
+
     @objc
     static func requiresMainQueueSetup() -> Bool {
         return true
@@ -16,6 +18,11 @@ class TestConnectNativeModule: NSObject {
     @objc
     func sendCallbackToNative(_ rnCallback: RCTResponseSenderBlock) {
         rnCallback(["A greeting from swift"])
+    }
+
+    @objc
+    func navigateBack() {
+        navigationController?.popViewController(animated: true)
     }
     
     @objc

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		4027896B2419F02B00DDDD5B /* DemoIntegrateRNUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4027896A2419F02B00DDDD5B /* DemoIntegrateRNUITests.swift */; };
 		454F314D1D6344D9AB8F77CE /* iCielVAGRoundedNext-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BA8EFE8B8D234EC09202FED9 /* iCielVAGRoundedNext-Light.otf */; };
 		79658B4F6E044D36BCAC9E83 /* iCielVAGRoundedNext-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F321FDDCE5724D229FE1EFA1 /* iCielVAGRoundedNext-Bold.otf */; };
+		A6F49DD82B89D9BD00BBD5D7 /* RNTMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A6F49DD72B89D9BD00BBD5D7 /* RNTMapManager.m */; };
 		C085FBAC523647499E3C8198 /* iCielVAGRoundedNext-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 788A12AC50B5454DBB05E81C /* iCielVAGRoundedNext-Medium.otf */; };
 		C52FC60E52AB4F5CA4ED19F1 /* iCielVAGRoundedNext-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4C6155125A464482B1305DD4 /* iCielVAGRoundedNext-LightItalic.otf */; };
 		C97F127D36E3F56BB305E287 /* libPods-DemoIntegrateRN-DemoIntegrateRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ADF4402471D4BFF813ED987 /* libPods-DemoIntegrateRN-DemoIntegrateRNTests.a */; };
@@ -80,6 +81,7 @@
 		846D12D046DDE76A361CAB61 /* Pods-DemoIntegrateRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN.release.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN/Pods-DemoIntegrateRN.release.xcconfig"; sourceTree = "<group>"; };
 		8ADF4402471D4BFF813ED987 /* libPods-DemoIntegrateRN-DemoIntegrateRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoIntegrateRN-DemoIntegrateRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A640B0A512184E97A1B96C31 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		A6F49DD72B89D9BD00BBD5D7 /* RNTMapManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNTMapManager.m; sourceTree = "<group>"; };
 		A803ACA9EDF4E61A7655EA16 /* Pods-DemoIntegrateRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRNTests.release.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRNTests/Pods-DemoIntegrateRNTests.release.xcconfig"; sourceTree = "<group>"; };
 		A81ECBF61482458E8DE298A2 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		AB59D2001CC540C0BFB3EBC6 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				402789482419F02900DDDD5B /* AppDelegate.swift */,
 				4027894A2419F02900DDDD5B /* SceneDelegate.swift */,
 				4027894C2419F02900DDDD5B /* ViewController.swift */,
+				A6F49DD72B89D9BD00BBD5D7 /* RNTMapManager.m */,
 				402789532419F02A00DDDD5B /* LaunchScreen.storyboard */,
 				00265C342420866A0047B6D4 /* TestConnectNative.m */,
 				00265C362420BF820047B6D4 /* TestConnectNative.swift */,
@@ -515,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */,
+				A6F49DD82B89D9BD00BBD5D7 /* RNTMapManager.m in Sources */,
 				00D083282429E31C00C54A10 /* RNViewManager.swift in Sources */,
 				4027894D2419F02900DDDD5B /* ViewController.swift in Sources */,
 				402789492419F02900DDDD5B /* AppDelegate.swift in Sources */,
@@ -632,10 +636,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -694,10 +695,7 @@
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_CPLUSPLUSFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;

@@ -9,6 +9,7 @@ import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   Pressable,
+  requireNativeComponent,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -18,61 +19,23 @@ import {
   View,
 } from 'react-native';
 import TestConnectNative from './TestConnectNative';
+import MapView from './MapView.tsx';
 
 import {
   Colors,
-  DebugInstructions,
   Header,
   LearnMoreLinks,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
 let rootTag = 1;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Pressable onPress={() => TestConnectNative.exitRN(rootTag)}>
-        <Text>Back to native view</Text>
-      </Pressable>
-
-
-      <Pressable onPress={() => TestConnectNative.goToNative(rootTag)}>
-        <Text>GO to another native view</Text>
-      </Pressable>
-
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
 
 function App(props: any): React.JSX.Element {
   useEffect(() => {
     rootTag = props.rootTag;
   }, [props.rootTag]);
   const isDarkMode = useColorScheme() === 'dark';
+
+  console.log('rootTag: ', rootTag);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -92,20 +55,19 @@ function App(props: any): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
+          <View style={styles.sectionContainer}>
+            <Pressable onPress={() => TestConnectNative.exitRN(rootTag)}>
+              <Text>Back to native view</Text>
+            </Pressable>
+
+            <Pressable onPress={() => TestConnectNative.goToNative(rootTag)}>
+              <Text>GO to another native view</Text>
+            </Pressable>
+            <View style={{flex: 1, height: 100, width: 100}}>
+              <MapView style={{flex: 1}}/>
+            </View>
+          </View>
+          {/* <LearnMoreLinks /> */}
         </View>
       </ScrollView>
     </SafeAreaView>

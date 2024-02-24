@@ -27,6 +27,12 @@ const TestConnectNative = {
       testConnectNative.goToSecondActivity();
     }
   },
+
+  navigateBack: () => {
+    if (Platform.OS === 'ios') {
+      testConnectNative.navigateBack();
+    }
+  },
 };
 
 export default TestConnectNative;
