@@ -1,7 +1,7 @@
-import React from 'react';
-import {requireNativeComponent} from 'react-native';
+import {ViewStyle, requireNativeComponent} from 'react-native';
 
+interface Props {
+  style: ViewStyle;
+}
 
-const RNTMap = requireNativeComponent('RNTMap');
-
-export default RNTMap;
+export const MapView = requireNativeComponent<Props>('RNTMap');

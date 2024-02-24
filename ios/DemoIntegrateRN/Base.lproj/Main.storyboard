@@ -151,7 +151,7 @@
         <!--Tab 2-->
         <scene sceneID="SHs-f5-FsJ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="vkZ-oH-IIi" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" customClass="SecondViewController" customModule="DemoIntegrateRN" customModuleProvider="target" id="vkZ-oH-IIi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5en-9V-7zu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

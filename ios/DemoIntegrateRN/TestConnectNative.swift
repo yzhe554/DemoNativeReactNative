@@ -30,7 +30,7 @@ class TestConnectNativeModule: NSObject {
         DispatchQueue.main.async {
             if let view = RNViewManager.sharedInstance.bridge?.uiManager.view(forReactTag: reactTag) {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let secondVC = storyBoard.instantiateViewController(withIdentifier: "SecondView") as! SencondViewController
+                let secondVC = storyBoard.instantiateViewController(withIdentifier: "SecondView") as! SecondViewController
                 secondVC.modalPresentationStyle = .fullScreen
 
                 let reactNativeVC: UIViewController! = view.reactViewController()
