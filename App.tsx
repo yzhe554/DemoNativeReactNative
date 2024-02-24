@@ -5,9 +5,10 @@
  * @format
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Pressable,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -16,6 +17,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import TestConnectNative from './TestConnectNative';
 
 import {
   Colors,
@@ -29,10 +31,15 @@ type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
+let rootTag = 1;
+
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
+      <Pressable onPress={() => TestConnectNative.exitRN(rootTag)}>
+        <Text>Back to native view</Text>
+      </Pressable>
       <Text
         style={[
           styles.sectionTitle,
@@ -55,7 +62,10 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
-function App(): React.JSX.Element {
+function App(props: any): React.JSX.Element {
+  useEffect(() => {
+    rootTag = props.rootTag;
+  }, [props.rootTag]);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
