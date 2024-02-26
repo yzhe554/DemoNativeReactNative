@@ -10,7 +10,7 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!-- <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
@@ -46,7 +46,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4750" y="1054"/>
-        </scene>
+        </scene> -->
         <!--View Controller-->
         <scene sceneID="ydW-w1-vyr">
             <objects>
@@ -133,7 +133,7 @@
             <point key="canvasLocation" x="5641" y="-690"/>
         </scene>
         <!--Side Menu Navigation Controller-->
-        <scene sceneID="mXK-p4-YNG">
+        <!-- <scene sceneID="mXK-p4-YNG">
             <objects>
                 <navigationController storyboardIdentifier="SideMenuNavigation" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="BDp-iZ-jxm" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <toolbarItems/>
@@ -149,7 +149,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qu7-tK-2Am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4750" y="343"/>
-        </scene>
+        </scene> -->
         <!--Tab 2-->
         <scene sceneID="SHs-f5-FsJ">
             <objects>
