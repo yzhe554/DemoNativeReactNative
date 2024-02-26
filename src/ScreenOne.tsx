@@ -6,7 +6,6 @@ import React, {
   ImageSourcePropType,
   View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useCallback, useEffect, useState } from 'react';
 import { Account, fetchAccounts } from './util/fetchAccounts';
 import { Divider } from './divider';
@@ -15,16 +14,20 @@ import { List } from './list/List';
 import { accountTypeImageMap } from './util/getLogo';
 import { MotiView } from 'moti';
 import { Skeleton } from 'moti/skeleton';
+import { SafeAreaView } from './util/SafeAreaView';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 24,
-    backgroundColor: '#FFFFFF',
-    flex: 1,
+    // paddingHorizontal: 24,
+    // backgroundColor: '#F6E05E',
+    // flex: 1,
   },
   sectionTitle: {
     fontSize: 24,
     fontWeight: '600',
+    backgroundColor: '#F6E05E',
+    paddingBottom: 16,
   },
   sectionDescription: {
     marginTop: 8,
@@ -111,6 +114,7 @@ const LoadingList = () => (
 
 export const ScreenOne = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const insets = useSafeAreaInsets();
 
   const [accounts, setAccounts] = useState<Account[]>([]);
 
@@ -141,6 +145,7 @@ export const ScreenOne = () => {
             flex: 1,
             padding: 16,
             marginTop: 24,
+            paddingTop: insets.top,
           }}
           animate={{ backgroundColor: '#ffffff' }}>
           <Divider />
@@ -157,13 +162,30 @@ export const ScreenOne = () => {
   }
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.sectionTitle}>Accounts</Text>
+      <Text
+        style={{
+          ...styles.sectionTitle,
+          paddingTop: insets.top,
+          paddingHorizontal: 16,
+        }}>
+        Accounts
+      </Text>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         showsVerticalScrollIndicator={false}
-        style={{ ...styles.backgrouncStyle, marginTop: 16 }}>
-        <Divider />
+        style={{ ...styles.backgrouncStyle, paddingHorizontal: 16 }}>
+        {/* <Divider /> */}
         <List>
+          {accounts.map((account: Account) => (
+            <AccountListItem
+              key={account.id}
+              logo={accountTypeImageMap[account.accountType.type]}
+              title={account.accountType.name}
+              accountDetails={account.accountNumber}
+              availableBalance={account.availableBalance}
+              balance={account.balance}
+            />
+          ))}
           {accounts.map((account: Account) => (
             <AccountListItem
               key={account.id}

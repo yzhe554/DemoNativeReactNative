@@ -10,44 +10,6 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <!-- <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSR-Y9-ZvC">
-                                <rect key="frame" x="156" y="44" width="63" height="30"/>
-                                <state key="normal" title="Go green"/>
-                                <connections>
-                                    <segue destination="NAM-hf-5xD" kind="show" id="l7p-iZ-qIK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgF-Ra-I91">
-                                <rect key="frame" x="151.5" y="82" width="72" height="30"/>
-                                <state key="normal" title="Go orange"/>
-                                <connections>
-                                    <segue destination="ndp-eR-yNf" kind="show" id="gsA-Fm-Ahu"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="pgF-Ra-I91" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qJ-qm-DQw"/>
-                            <constraint firstItem="WSR-Y9-ZvC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ID6-Hy-eaa"/>
-                            <constraint firstItem="pgF-Ra-I91" firstAttribute="top" secondItem="WSR-Y9-ZvC" secondAttribute="bottom" constant="8" symbolic="YES" id="XH3-ar-bum"/>
-                            <constraint firstItem="WSR-Y9-ZvC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gd4-2k-ct2"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="l08-YJ-JfI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4750" y="1054"/>
-        </scene> -->
-        <!--View Controller-->
         <scene sceneID="ydW-w1-vyr">
             <objects>
                 <viewController id="ndp-eR-yNf" sceneMemberID="viewController">
@@ -82,15 +44,11 @@
         <!--Menu View Controller-->
         <scene sceneID="NBE-ze-zh2">
             <objects>
-                <tabBarController id="Z5S-yN-Pf8" customClass="MenuViewController" customModule="DemoIntegrateRN" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Z5S-yN-Pf8" customClass="MenuViewController" customModule="DemoIntegrateRN" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6gg-u9-9Ri">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="sliderpic" id="zuI-Hm-s4v">
-                            <connections>
-                                <segue destination="BDp-iZ-jxm" kind="presentation" id="tJW-lT-bbO"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="sliderpic" id="zuI-Hm-s4v"/>
                     </navigationItem>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhh-UU-Fqm">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mhh-UU-Fqm" propertyAccessControl="none">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,7 +65,7 @@
         <!--Accounts-->
         <scene sceneID="i5k-jO-Scg">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="3BJ-xt-JrH" customClass="ViewController" customModule="DemoIntegrateRN" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="3BJ-xt-JrH" customClass="ViewController" customModule="DemoIntegrateRN" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WxC-Bs-szy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,24 +90,6 @@
             </objects>
             <point key="canvasLocation" x="5641" y="-690"/>
         </scene>
-        <!--Side Menu Navigation Controller-->
-        <!-- <scene sceneID="mXK-p4-YNG">
-            <objects>
-                <navigationController storyboardIdentifier="SideMenuNavigation" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="BDp-iZ-jxm" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Er-h4-uck">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J1o-CB-eSW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qu7-tK-2Am" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4750" y="343"/>
-        </scene> -->
         <!--Tab 2-->
         <scene sceneID="SHs-f5-FsJ">
             <objects>
