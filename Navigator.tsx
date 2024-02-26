@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {ScreenOne} from './ScreenOne';
-import {ScreenTwo} from './ScreenTwo';
+import {ScreenOne} from './src/ScreenOne';
+import {ScreenTwo} from './src/ScreenTwo';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
