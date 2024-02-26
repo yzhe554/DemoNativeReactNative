@@ -13,6 +13,8 @@ import { Divider } from './divider';
 import { ListItem } from './list/ListItem';
 import { List } from './list/List';
 import { accountTypeImageMap } from './util/getLogo';
+import { MotiView } from 'moti';
+import { Skeleton } from 'moti/skeleton';
 
 const styles = StyleSheet.create({
   container: {
@@ -94,6 +96,18 @@ const AccountListItem = ({
     <Divider />
   </>
 );
+const Spacer = ({ height = 16 }) => <View style={{ height }} />;
+
+const LoadingList = () => (
+  <>
+    <Spacer />
+    <Skeleton colorMode="light" width={'100%'} />
+    <Spacer height={8} />
+    <Skeleton colorMode="light" width={'100%'} />
+    <Spacer />
+    <Divider />
+  </>
+);
 
 export const ScreenOne = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -117,7 +131,29 @@ export const ScreenOne = () => {
   }, [getAccounts]);
 
   if (!accounts.length) {
-    return null;
+    return (
+      <SafeAreaView style={styles.container}>
+        <MotiView
+          transition={{
+            type: 'timing',
+          }}
+          style={{
+            flex: 1,
+            padding: 16,
+            marginTop: 24,
+          }}
+          animate={{ backgroundColor: '#ffffff' }}>
+          <Divider />
+          <LoadingList />
+          <LoadingList />
+          <LoadingList />
+          <LoadingList />
+          <LoadingList />
+          <LoadingList />
+          <LoadingList />
+        </MotiView>
+      </SafeAreaView>
+    );
   }
   return (
     <SafeAreaView style={styles.container}>

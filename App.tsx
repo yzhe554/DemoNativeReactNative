@@ -5,10 +5,12 @@
  * @format
  */
 
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {Navigator} from './Navigator';
+import { NavigationContainer } from '@react-navigation/native';
+import { Navigator } from './Navigator';
+import 'react-native-reanimated';
+import 'react-native-gesture-handler';
 
 export let rootTag = 1;
 
