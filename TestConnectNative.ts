@@ -1,5 +1,5 @@
 // If TestConnectNative is an package from npm, you can think this is index.js file
-import {NativeModules, Platform} from 'react-native';
+import { NativeModules, Platform } from 'react-native';
 
 const testConnectNative = NativeModules.TestConnectNative;
 
@@ -28,10 +28,10 @@ const TestConnectNative = {
     }
   },
 
-  navigateBack: () => {
-    if (Platform.OS === 'ios') {
-      testConnectNative.navigateBack();
-    }
+  getToken: () => {
+    // if (Platform.OS === 'ios') {
+     return testConnectNative.getToken();
+    // }
   },
 };
 

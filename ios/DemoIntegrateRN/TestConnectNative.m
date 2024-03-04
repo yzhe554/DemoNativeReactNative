@@ -4,7 +4,10 @@
 
 RCT_EXTERN_METHOD(sendMessageToNative: (NSString)rnMessage)
 RCT_EXTERN_METHOD(sendCallbackToNative: (RCTResponseSenderBlock)rnCallback)
-RCT_EXTERN_METHOD(navigateBack: ())
+RCT_EXTERN_METHOD(
+  getToken: (RCTPromiseResolveBlock)resolve
+  rejecter: (RCTPromiseRejectBlock)reject
+)
 RCT_EXTERN_METHOD(goToSecondViewController: (nonnull NSNumber *)reactTag)
 RCT_EXTERN_METHOD(dismissViewController: (nonnull NSNumber *)reactTag)
 

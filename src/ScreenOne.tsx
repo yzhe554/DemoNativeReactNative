@@ -16,6 +16,7 @@ import { MotiView } from 'moti';
 import { Skeleton } from 'moti/skeleton';
 import { SafeAreaView } from './util/SafeAreaView';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import TestConnectNative from '../TestConnectNative';
 
 const styles = StyleSheet.create({
   container: {
@@ -120,15 +121,14 @@ export const ScreenOne = () => {
 
   const getAccounts = useCallback(async () => {
     setIsLoading(true);
+    const a = await TestConnectNative.getToken();
+    console.log('a: ', a);
     try {
       const _accounts = await fetchAccounts();
-      console.log('_accounts: ', _accounts);
       setAccounts(_accounts);
     } catch {}
     setIsLoading(false);
   }, []);
-
-  console.log('accounts: ', accounts);
 
   useEffect(() => {
     getAccounts();

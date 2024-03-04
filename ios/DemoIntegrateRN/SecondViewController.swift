@@ -41,7 +41,6 @@ class SecondViewController: UIViewController {
 
      func loadReactNativeView() {
         let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
-        
         let rootView = RCTRootView(
             bundleURL: jsCodeLocation,
             moduleName: "DemoIntegrateRN",

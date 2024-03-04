@@ -5,6 +5,8 @@ import React
 class TestConnectNativeModule: NSObject {
    weak var navigationController: UINavigationController?
 
+   private var token = "JWTTOKEN";
+
     @objc
     static func requiresMainQueueSetup() -> Bool {
         return true
@@ -21,8 +23,11 @@ class TestConnectNativeModule: NSObject {
     }
 
     @objc
-    func navigateBack() {
-        navigationController?.popViewController(animated: true)
+    func getToken(
+        _ resolve: RCTPromiseResolveBlock,
+        rejecter reject: RCTPromiseRejectBlock
+    ) -> Void {
+        resolve(token)
     }
     
     @objc
