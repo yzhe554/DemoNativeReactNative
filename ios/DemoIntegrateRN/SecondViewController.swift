@@ -40,12 +40,16 @@ class SecondViewController: UIViewController {
     }
 
      func loadReactNativeView() {
-        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
-        let rootView = RCTRootView(
-            bundleURL: jsCodeLocation,
-            moduleName: "DemoIntegrateRN",
-            initialProperties: ["page": "router2"]
-        )
+        // let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
+        // let rootView = RCTRootView(
+        //     bundleURL: jsCodeLocation,
+        //     moduleName: "DemoIntegrateRN",
+        //     initialProperties: ["page": "router2"]
+        // )
+        let rootView = RNViewManager.sharedInstance.viewForModule(
+            "DemoIntegrateRN",
+            initialProperties: ["page": "router2"])
+        
         self.view = rootView
         //  let reactNativeVC = UIViewController()
         // reactNativeVC.view = rootView
