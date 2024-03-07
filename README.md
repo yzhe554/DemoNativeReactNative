@@ -1,7 +1,3 @@
-07/03/2024 - An issue has been identified for xcode 15.3
-To fix this issue temporarily run `chmod 755 ios/Pods/Flipper/xplat/Flipper/FlipperTransportTypes.h`
-And rerun `npx pod-install ios`
-
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started

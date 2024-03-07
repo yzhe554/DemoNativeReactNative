@@ -1,3 +1,4 @@
+import { ScrollView } from 'moti';
 import React, { ReactNode } from 'react';
 import { View, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -11,7 +12,9 @@ export const SafeAreaView = ({ children, style }: SafeAreaViewProps) => {
   const insets = useSafeAreaInsets();
 
   return (
-    <View
+    <ScrollView
+      // contentInsetAdjustmentBehavior="automatic"
+      showsVerticalScrollIndicator={false}
       style={{
         flex: 1,
         // justifyContent: 'space-between',
@@ -23,6 +26,6 @@ export const SafeAreaView = ({ children, style }: SafeAreaViewProps) => {
         ...style,
       }}>
       {children}
-    </View>
+    </ScrollView>
   );
 };

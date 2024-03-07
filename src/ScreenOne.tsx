@@ -170,10 +170,7 @@ export const ScreenOne = () => {
         }}>
         Accounts
       </Text>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        showsVerticalScrollIndicator={false}
-        style={{ ...styles.backgrouncStyle, paddingHorizontal: 16 }}>
+      <View style={{ ...styles.backgrouncStyle, paddingHorizontal: 16 }}>
         {/* <Divider /> */}
         <List>
           {accounts.map((account: Account) => (
@@ -197,7 +194,7 @@ export const ScreenOne = () => {
             />
           ))}
         </List>
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
