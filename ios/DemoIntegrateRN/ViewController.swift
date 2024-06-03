@@ -40,22 +40,23 @@ class ViewController: UIViewController {
     }
 
      func loadReactNativeView() {
-        let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
+        // let jsCodeLocation = URL(string: "http://localhost:8081/index.bundle?platform=ios")!
         
-        let rootView = RCTRootView(
-            bundleURL: jsCodeLocation,
-            moduleName: "DemoIntegrateRN",
-            initialProperties: ["page": "router1"]
-        )
-        self.view = rootView
+        // let rootView = RCTRootView(
+        //     bundleURL: jsCodeLocation,
+        //     moduleName: "DemoIntegrateRN",
+        //     initialProperties: ["page": "router1"]
+        // )
+        // self.view = rootView
         //  let reactNativeVC = UIViewController()
         // reactNativeVC.view = rootView
         // reactNativeVC.modalPresentationStyle = .fullScreen
         // present(reactNativeVC, animated: true)
 
-        //  let rootView = RNViewManager.sharedInstance.viewForModule(
-        //     "DemoIntegrateRN",
-        //     initialProperties: ["page": "router1"])
+         let rootView = RNViewManager.sharedInstance.viewForModule(
+            "DemoIntegrateRN",
+            initialProperties: ["page": "router1"])
+        self.view = rootView
         
         // let reactNativeVC = UIViewController()
         // reactNativeVC.view = rootView
