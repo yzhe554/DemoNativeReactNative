@@ -132,7 +132,7 @@ const accounts = {
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 export const fetchAccounts = async () => {
-  await sleep(2000);
+  // await sleep(500);
   return accounts.data;
 };
 
